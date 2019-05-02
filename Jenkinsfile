@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'glpi' }
+    agent { label 'deploy' }
     environment {
         // Specify your environment variables.
         APP_VERSION = '1.1'
