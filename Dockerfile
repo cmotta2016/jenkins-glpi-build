@@ -19,7 +19,7 @@ RUN docker-php-ext-configure gd --with-jpeg-dir=/usr/include --with-png-dir=/usr
 	docker-php-ext-configure imap --with-kerberos --with-imap-ssl ; \
 	docker-php-ext-configure opcache ; \
 	docker-php-ext-configure xmlrpc ; \
-	docker-php-ext-install gd ldap mysqli imap opcache xmlrpc
+	docker-php-ext-install gd ldap mysqli imap opcache xmlrpc exif
 
 RUN printf "\n" | pecl install apcu apcu_bc-beta
 RUN echo extension=apcu.so > /usr/local/etc/php/php.ini
