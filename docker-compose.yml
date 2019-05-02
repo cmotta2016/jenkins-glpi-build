@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+   database:
+     image: mysql:5.7.22
+     volumes:
+       - database:/var/lib/mysql
+     restart: unless-stopped
+     environment:
+       MYSQL_ROOT_PASSWORD: glpi
+     container_name: database
+
+   glpi:
+     image: cmotta2016/glpi
+     ports:
+       - "80"
+     restart: unless-stopped
+     volumes:
+       - glpiserver:/var/www/glpi
+     container_name: glpiserver
+     
+volumes:
+  database:
+  glpiserver:
