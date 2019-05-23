@@ -1,7 +1,7 @@
 FROM php:7.3.4-apache
 MAINTAINER Carlos Motta <motta.carlos08@gmail.com>
-ARG GLPI_VERSION
-ENV GLPI_VERSION ${GLPI_VERSION}
+#ARG GLPI_VERSION
+ENV GLPI_VERSION 9.3.4
 
 RUN chmod +x /usr/local/bin/*
 
