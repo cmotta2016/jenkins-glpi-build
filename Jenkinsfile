@@ -2,7 +2,7 @@ pipeline {
     agent { label 'deploy' }
     environment {
         // Specify your environment variables.
-        GLPI_VERSION = '9.4.1.1'
+        GLPI_VERSION = '9.4.2'
     }
     stages {
         stage('Build') {
