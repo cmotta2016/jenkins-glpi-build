@@ -2,7 +2,7 @@ pipeline {
     agent { label 'deploy' }
     environment {
         // Specify your environment variables.
-        APP_VERSION = '1.1'
+        GLPI_VERSION = '9.3.4'
     }
     stages {
         stage('Build') {
@@ -26,8 +26,8 @@ pipeline {
             steps {
                 withDockerRegistry([ credentialsId: "docker-hub-credentials", url: "" ]) {
                 echo 'Pushing docker images'
-                sh 'docker tag cmotta2016/glpi:$GIT_COMMIT cmotta2016/glpi:release-9.3.3'
-                sh 'docker push cmotta2016/glpi:release-9.3.3'
+                sh 'docker tag cmotta2016/glpi:$GIT_COMMIT cmotta2016/glpi:release-$GLPI_VERSION'
+                sh 'docker push cmotta2016/glpi:release-$GLPI_VERSION'
                 }
             }
         }

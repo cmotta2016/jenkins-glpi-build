@@ -11,7 +11,7 @@ services:
      container_name: database
 
    glpi:
-     image: cmotta2016/glpi:release-9.3.3
+     image: cmotta2016/glpi:release-${GLPI_VERSION}
      ports:
        - "80"
      restart: unless-stopped
