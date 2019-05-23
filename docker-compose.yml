@@ -16,7 +16,7 @@ services:
        - "80"
      restart: unless-stopped
      volumes:
-       - glpiserver:/var/www/glpi
+       - glpiserver:/var/www/glpi:release-9.3.2
      container_name: glpiserver
      
 volumes:
