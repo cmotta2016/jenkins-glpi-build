@@ -26,8 +26,8 @@ pipeline {
             steps {
                 withDockerRegistry([ credentialsId: "docker-hub-credentials", url: "" ]) {
                 echo 'Pushing docker images'
-                sh 'docker tag cmotta2016/glpi:$GIT_COMMIT cmotta2016/glpi:release-9.3.2'
-                sh 'docker push cmotta2016/glpi:release-9.3.2'
+                sh 'docker tag cmotta2016/glpi:$GIT_COMMIT cmotta2016/glpi:release-9.3.3'
+                sh 'docker push cmotta2016/glpi:release-9.3.3'
                 }
             }
         }
